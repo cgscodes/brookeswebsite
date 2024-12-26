@@ -1,0 +1,696 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Easy-Grotesk-Black";
+    src: url("../fonts/EasyGrotesk/Easy-Grotesk-Black-Demo-BF653883937b855.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Wanted-ExtraBlack";
+    src: url("../fonts/Wanted/WantedSans-ExtraBlack-BF65baf133c4859.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Wanted-Black";
+    src: url("../fonts/Wanted/WantedSans-Black-BF65baf1369b817.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Wanted-ExtraBold";
+    src: url("../fonts/Wanted/WantedSans-ExtraBold-BF65baf137317a5.otf");
+}
+
+@font-face {
+    font-family: "Wanted-SemiBold";
+    src: url("../fonts/Wanted/WantedSans-SemiBold-BF65baf13722853.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Wanted-Bold";
+    src: url("../fonts/Wanted/WantedSans-Bold-BF65baf135d5a25.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Wanted-Medium";
+    src: url("../fonts/Wanted/WantedSans-Medium-BF65baf1388963b.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Wanted-Regular";
+    src: url("../fonts/Wanted/WantedSans-Regular-BF65baf13579965.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Wanted-Variable";
+    src: url("../fonts/Wanted/WantedSansVariable-BF65baf13a24667.ttf") format("truetype");
+}
+
+
+
+#html-content {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+
+    overflow-y: auto;
+    height: 100%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fdfdfd;
+    flex-grow: 1;
+
+}
+
+footer {
+    flex: none;
+}
+
+header {
+    top: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: none;
+
+    width: 100%;
+
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    position: 
+    z-index: 10;
+}
+
+/** Header Container **/
+
+#navigation-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#logo img {
+    width: 65px;
+    height: 65px;
+}
+
+#logo-menu {
+    display: flex;
+    gap: 30px;
+}
+
+#page-name a {
+    color: white;
+    font-family: Wanted-Regular;
+
+    text-decoration: none;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    position: relative; 
+    z-index: 10;
+}
+
+#menu ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+#menu ul li a {
+    color: rgb(255, 255, 255);
+    font-family: Wanted-Medium;
+    font-size: 16.5px;
+
+    text-decoration: none;
+}
+
+#menu ul li a:hover {
+    text-decoration: solid underline 1px;
+}
+
+/** Header Container Ends **/
+
+/** Body **/
+
+/** Introduction **/
+
+#body {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+#intro-background {
+    background-color: rgb(37, 37, 37);
+    height: auto;
+    margin-left: 10%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+}
+
+#intro-background img {
+    width: 110%;
+    height: auto%
+    position: relative;
+    margin-left: -10%;
+    z-index: -1;
+}
+
+.intro-text {
+    color: white;
+    font-family: wanted-regular;
+    width: 150%;
+    padding: 20px;
+}
+
+.intro-text h1 {
+    font-size: 120px;
+    font-family: wanted-extrabold;
+    font-weight: 100vh;
+    line-height: 1;
+    padding-bottom: 15px;
+}
+
+.intro-text h2 {
+    font-size: 55px;
+    font-family: wanted-semibold;
+    color:rgb(218, 218, 218);
+}
+
+.intro-text p {
+    font-size: 25px;
+    font-family: wanted-regular;
+    color: rgb(146, 146, 146);
+}
+
+/** Mobile Devices **/
+
+#hamburger-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #hamburger-icon {
+        display: block;
+    }
+
+    #menu ul {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        z-index: 10;
+        padding: 15px; /* add padding around the border */
+        border-radius: 10%;
+    }
+
+    #menu ul.show {
+        display: flex;
+    }
+
+    #intro-background {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    #intro-background img {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .intro-text {
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .intro-text h1 {
+        font-size: 8vw;
+        line-height: 1.2;
+    }
+
+    .intro-text h2 {
+        font-size: 4.5vw;
+    }
+
+    .intro-text p {
+        font-size: 3.5vw;
+        margin-bottom: 20px;
+    }
+}
+
+/** Expeirence Container **/
+.experience-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgba(54, 116, 223, 0.2); 
+}  
+
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+.card-list .card-item {
+    list-style: none;
+    font-family: wanted-regular;
+}
+
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link {
+    cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover {
+    border-color: #5372F0;
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .badge {
+    color: #5372F0;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: #DDE4FF;
+    width: fit-content;
+    border-radius: 50px;
+    letter-spacing: -0.02em;
+}
+
+.card-list .card-link .badge.designer {
+    color: #B22485;
+    background: #F7DFF5;
+    text-transform: none;
+}
+
+.card-list .card-link .badge.developer {
+    color: ;
+    background: ;
+}
+
+.card-list .card-link .badge.marketer {
+    color: #B25A2B;
+    background: #FFE3D2;
+}
+
+.card-list .card-link .badge.gamer {
+    color: #205C20;
+    background: #D6F8D6;
+}
+
+.card-list .card-link .badge.editor {
+    color: #856404;
+    background: #fff3cd;
+}
+
+.card-list .card-link .badge.nurse {
+    color: #000000;
+    background: #ffff07;
+}
+
+.card-list .card-link .badge.vet {
+    color: #ffffff;
+    background: #16ffff;
+}
+
+.card-list .card-link .badge.teacher {
+    color: #000000;
+    background: #ff1515;
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button {
+    height: 35px;
+    width: 35px;
+    color: #5372F0;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #5372F0;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button {
+    color: #fff;
+    background: #5372F0;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #5372F0;
+}
+
+.card-wrapper .swiper-slide-button {
+    color: #5372F0;
+    margin-top: -35px;
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        margin: 0 10px 25px;
+    }
+
+    .card-wrapper .swiper-slide-button {
+        display: none;
+    }
+}
+
+/** Form **/
+#container {
+    padding-top: 10px;
+    padding-bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#feedback-form {
+    width: 80%;
+    border: 1px solid rgba(0, 0, 0, 0.145);
+    border-radius: 20px;
+
+    -webkit-box-shadow: 2px 3px 21px 4px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 2px 3px 21px 4px rgba(0, 0, 0, 0.16);
+    box-shadow: 2px 3px 21px 4px rgba(0, 0, 0, 0.16);
+
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#feedback-form-heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    font-family: Wanted-Bold;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    #feedback-form {
+        width: 90vw; /* adjust the width to your liking */
+        padding: 20px; /* adjust the padding to your liking */
+        font-size: 18px; /* adjust the font size to your liking */
+    }
+}
+
+/** Form Input Fields **/
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-input span {
+    color: red;
+    font-size: 20px;
+}
+
+.form-input label {
+    font-size: 17px;
+    font-family: wanted-regular;
+}
+
+.form-input input {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    font-family: wanted-regular;
+
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.193);
+}
+
+.form-input textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-size: 15px;
+    font-family: wanted-regular;
+
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.193);
+}
+
+.form-input2 {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.form-input2 span {
+    color: red;
+    font-size: 20px;
+}
+
+.form-input2 label {
+    font-size: 17px;
+    font-family: wanted-regular;
+}
+
+.form-input2 input {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    font-family: wanted-regular;
+
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.193);
+}
+
+.form-input2 textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-size: 15px;
+    flex-direction: column;
+
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.193);
+}
+
+#feedback-form form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    padding-right: 70px;
+    gap: 15px;
+}
+
+
+
+.submit-row {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+.submit-row button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 70%;
+
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.185);
+    background-color: #00539f;
+
+    color: white;
+    font-size: 20px;
+    font-family: wanted-regular;
+}
+
+/** Footer Bottom **/
+footer img {
+    width: 100%;
+    z-index: 20;
+    margin-bottom: -4px;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+    background-color: #111;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+/** Hover Effects on Social Media Icons **/
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    background-color: white;
+    transition: 0.5s;
+    border-radius: 50%;
+    transform: scale(1.1);
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: nonedisc;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-family: Wanted-Regular;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+    font-family: Wanted-Regular;
+    font-size: 0.8em;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px){
+    .footerNav ul {
+        flex-direction: column;
+    }
+    .footerNav li {
+        list-style: none;
+    }
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
