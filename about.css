@@ -241,7 +241,7 @@ header {
 
 /* Light Blue Container */
 #my-background-container {
-    background: url('../images/Background/my\ background.png') no-repeat center center / cover;
+    background: url('/static/images/Background/my\ background.png') no-repeat center center / cover;
     padding: 40px 20px; /* Ensure enough space for content */
     font-family: Wanted-Regular;
     display: flex;

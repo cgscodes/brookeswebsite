@@ -170,11 +170,8 @@ header {
         right: 10px;
         width: 200px;
         z-index: 10;
-<<<<<<< HEAD
-=======
         padding: 15px; /* add padding around the border */
         border-radius: 10%;
->>>>>>> dfddce6 (nav fix all; home semi finished)
     }
 
     #menu ul.show {
@@ -186,7 +183,7 @@ header {
 
 /** Body **/
 body {
-  background-image: url('../images/connectbackground.jpg');
+  background-image: url('/static/images/connectbackground.jpg');
   background-size: cover;
   position: relative;
 }
