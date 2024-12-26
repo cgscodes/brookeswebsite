@@ -183,7 +183,7 @@ header {
 
 /** Body **/
 body {
-  background-image: url('/static/images/connectbackground.jpg');
+  background-image: url('connectbackground.jpg');
   background-size: cover;
   position: relative;
 }
